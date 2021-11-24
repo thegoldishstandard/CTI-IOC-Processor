@@ -42,7 +42,7 @@ with open(config_filename) as f:
 
 # Calculate dates to pass to the templates
 today = datetime.date.today()
-today_str = today.strftime(config_data['output_dir_date_format'])
+today_str = datetime.datetime.now().strftime("%Y-%m-%d-%H:%M:%S")
 seven_days = today + datetime.timedelta(days=7)
 fourteen_days = today + datetime.timedelta(days=14)
 thirty_days = today + datetime.timedelta(days=30)
